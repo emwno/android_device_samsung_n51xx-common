@@ -15,6 +15,7 @@
 #
 
 -include device/samsung/smdk4412-common/common.mk
+DEVICE_PACKAGE_OVERLAYS += device/samsung/n8xx-common/overlay-common
 
 PRODUCT_AAPT_CONFIG := xlarge hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
@@ -22,6 +23,20 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 1280
 PRODUCT_CHARACTERISTICS := tablet
+
+# Init files
+PRODUCT_COPY_FILES += \
+    device/samsung/n80xx-common/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
+    device/samsung/n80xx-common/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc
+
+# Packages
+PRODUCT_PACKAGES += \
+    libsecril-client \
+    GalaxyNoteTabSettings \
+
+# These are the hardware-specific features
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
 # Vendor
 $(call inherit-product-if-exists, vendor/samsung/n51xx/n51xx-vendor.mk)
