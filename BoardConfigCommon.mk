@@ -43,6 +43,8 @@ SP2_NAME := "modem"
 SP2_BACKUP_METHOD := image
 SP2_MOUNTABLE := 0
 TARGET_USERIMAGES_USE_EXT4 := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
 
 # inherit from the proprietary version
 -include vendor/samsung/n51xx-common/BoardConfigVendor.mk
