@@ -15,7 +15,7 @@
 #
 
 -include device/samsung/smdk4412-common/common.mk
-DEVICE_PACKAGE_OVERLAYS += device/samsung/n8xx-common/overlay-common
+DEVICE_PACKAGE_OVERLAYS += device/samsung/n51xx-common/overlay-common
 
 PRODUCT_AAPT_CONFIG := xlarge hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
@@ -26,8 +26,8 @@ PRODUCT_CHARACTERISTICS := tablet
 
 # Init files
 PRODUCT_COPY_FILES += \
-    device/samsung/n80xx-common/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
-    device/samsung/n80xx-common/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc
+    device/samsung/n51xx-common/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
+    device/samsung/n51xx-common/ueventd.smdk4x12.rc:recovery/root/ueventd.smdk4x12.rc
 
 # Packages
 PRODUCT_PACKAGES += \
